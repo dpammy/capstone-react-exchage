@@ -1,0 +1,30 @@
+/*
+ * [0] Force landscape to take precedence if the width is
+ *     beyond the tablet portrait breakpoint. (I use these
+ *     sparingly I promise!).
+ */
+
+.CurrencyReverseButton {
+  margin: 0 30px;
+  background-color: transparent;
+  border: none;
+}
+
+.CurrencyReverseButton img {
+  margin: 10px;
+  max-width: 5em;
+}
+
+/* For landscape phone only */
+@media only screen and (max-width: 899px) and (orientation: landscape) {
+  .CurrencyReverseButton img {
+    max-width: 4em!important; /* [0] */
+  }
+}
+
+/* For tablet portrait up */
+@media only screen and (min-width: 600px) {
+  .CurrencyReverseButton img {
+    max-width: 4em;
+  }
+}
